@@ -1,0 +1,8 @@
+FROM registry.cn-shanghai.aliyuncs.com/sdev/ubuntu-node-12:latest
+
+RUN apt-get update && \
+  apt-get install -y build-essential python2.7
+
+RUN npm config set python python2.7 && yarn config set python python2.7
+
+ENTRYPOINT [ "/bin/bash" ]
