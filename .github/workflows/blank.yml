@@ -46,16 +46,16 @@ jobs:
         registry: registry.cn-shanghai.aliyuncs.com
         repository: sdev/node
         tags: 12-slim-c
-    - name: Build and push Docker images ubunut
+    - name: Build and push Docker images ubuntu
       uses: docker/build-push-action@v1.1.0
       with:
         username: shihaowang123
         password: ${{ secrets.PASSWORD }}
-        dockerfile: Dockerfile-12-ubunut
+        dockerfile: Dockerfile-12-ubuntu
         registry: registry.cn-shanghai.aliyuncs.com
         repository: sdev/node
         tags: 12-ubuntu
-    - name: Build and push Docker images
+    - name: Build and push Docker images ubuntu-c
       uses: docker/build-push-action@v1.1.0
       with:
         username: shihaowang123
