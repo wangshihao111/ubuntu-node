@@ -1,0 +1,9 @@
+FROM registry.cn-shanghai.aliyuncs.com/sdev/node:12-slim
+
+RUN apt update && \
+    apt install -y python2.7 build-essential
+    
+
+RUN RUN npm config set python python2.7 && yarn config set python python2.7
+
+ENTRYPOINT [ "/bin/bash" ]
