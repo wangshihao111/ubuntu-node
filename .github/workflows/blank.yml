@@ -25,8 +25,7 @@ jobs:
       with:
         username: shihaowang123
         password: ${{ secrets.PASSWORD }}
-        dockerfile: Dockerfile-slim
+        dockerfile: Dockerfile-12-slim
         registry: registry.cn-shanghai.aliyuncs.com
         repository: sdev/node
         tags: 12-slim
-        build_args: -f Dockerfile-slim
