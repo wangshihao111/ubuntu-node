@@ -20,10 +20,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: PWD
-      run: 
+      run:
         pwd
+    - name: LS
+      run:
         ls
-        cat Dockerfile-12-ubuntu
+    - name: CAT
+      run:
+        cat ./ci.sh
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Build and push Docker images
       uses: docker/build-push-action@v1.1.0
