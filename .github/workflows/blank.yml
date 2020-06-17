@@ -19,6 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: Test
+      run: pwd && ls
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Build and push Docker images
       uses: docker/build-push-action@v1.1.0
