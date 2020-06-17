@@ -24,7 +24,7 @@ jobs:
       uses: docker/build-push-action@v1.1.0
       with:
         username: shihaowang123
-        password: ${{ PASSWORD }}
+        password: ${{ secrets.PASSWORD }}
         repository: registry.cn-shanghai.aliyuncs.com/sdev/node
         tags: 12-slim
         build_args: -f Dockerfile-slim
