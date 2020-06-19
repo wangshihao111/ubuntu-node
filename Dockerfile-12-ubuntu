@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && \
-  apt-get install -y git  curl
+  apt-get install -y git curl pkg-config libx11-dev libxkbfile-dev libsecret-1-dev
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && apt-get install -y nodejs && apt-get clean
 RUN npm install -g yarn && npm cache clean --force
